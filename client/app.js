@@ -1,14 +1,23 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import { createRoot } from 'react-dom/client';
 import Header from './components/Header';
+import Home from './components/Home';
+import PCDirectory from "./components/PCDirectory";
+import SessionNotesDirectory from "./components/SessionNotesDirectory";
+import CharacterSheet from './components/CharacterSheet';
 
-const Home = () => {
+const App = () => {
     return (
         <>
             <Header />
             <main>
-                <h1>Curse of Strahd with the FoCo Squad</h1>
-                <h2>Welcome to the official website for our Curse of Strahd campaign!</h2>
+                <Routes>
+                    <Route path="/" element = {<Home />} />
+                    <Route path="/players" element={<PCDirectory />} />
+                    <Route path="/players/:name" element={<CharacterSheet />} />
+                    <Route path="/session-notes" element={<SessionNotesDirectory />} />
+                </Routes>
             </main>
         </>
     )
@@ -16,6 +25,10 @@ const Home = () => {
 
 const container = document.getElementById("root");
 export const root = createRoot(container);
-root.render(<Home />);
+root.render(
+    <HashRouter>
+        <App />
+    </HashRouter>
+);
 
-export default Home;
+export default App;

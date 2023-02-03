@@ -1,16 +1,15 @@
 import React from "react";
-import Home, { root } from "../app";
-import PlayerCharacters from "./PlayerDirectory";
-import SessionNotesDirectory from "./SessionNotesDirectory";
-import "../../public/header.css"
+import { useNavigate } from "react-router-dom";
+import "../header.css"
 
 const Header = () => {
+    const navigate = useNavigate();
     return (
         <header>
             <nav>
-                <button className="home" onClick={() => root.render(<Home />)}>Home</button>
-                <button className="pcs" onClick={() => root.render(<PlayerCharacters />)}>Player Characters</button>
-                <button className="notes" onClick={() => root.render(<SessionNotesDirectory />)}>Session Notes</button>
+                <button className="home" onClick={() => navigate('/')}>Home</button>
+                <button className="pcs" onClick={() => navigate("/players")}>Player Characters</button>
+                <button className="notes" onClick={() => navigate("/session-notes")}>Session Notes</button>
             </nav>
         </header>
     )
