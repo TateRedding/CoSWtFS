@@ -1,0 +1,135 @@
+section {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    background: #d7dad9
+}
+
+/* --- Top Section --- */
+.portrait {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.general-information {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.names {
+    text-align: center;
+    padding: 2em 0;
+}
+
+.demographic {
+    width: 100%;
+}
+
+.demographic > div {
+    display: flex;
+    justify-content: space-around;
+    padding: 1em 0;
+}
+
+.demographic > div > div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.demographic > div > div > p:last-child {
+    text-transform: uppercase;
+    font-size: 0.75em;
+    font-weight: bold;
+}
+
+.demographic > div > div > p:first-child {
+    text-transform: capitalize;
+}
+
+/* --- Stats Section --- */
+.character-details, .character-details > div:first-child, .stat-row {
+    display: flex;
+}
+
+.character-details > div {
+    flex: 1;
+}
+
+.stat-row > div {
+    margin: 0.25em;
+    flex: 1;
+}
+
+.stat-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 .5em;
+}
+
+.left-column:first-child {
+    flex: 1;
+}
+
+.left-column:nth-child(2) {
+    flex: 2;
+}
+
+.stat-block {
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: .5em;
+    margin: .25em;
+}
+
+.vertical, .list {
+    display: flex;
+    flex-direction: column;
+}
+
+.vertical {
+    align-items: center;
+}
+
+.list > p {
+    text-align: center;
+}
+
+.horizontal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modifier {
+    width: 2.5em;
+    padding: .2em;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.saves-and-skills li, .proficiencies li, .proficiencies p {
+    text-transform: capitalize;
+}
+
+.vertical > p:first-of-type, .horizontal > p:first-of-type {
+    font-size: 25px;
+}
+
+.stat-block > p:last-of-type {
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: bold;
+    margin: .25em 0;
+}
+
+.horizontal > p:last-of-type, li > span {
+    margin-left: .5em;
+}

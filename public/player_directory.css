@@ -1,0 +1,19 @@
+.pcs {
+    border-bottom: 2px solid #d9dad7;
+}
+
+.character-card-container {
+    display: flex;
+    justify-content: center;
+}
+
+.character-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 3px 3px 5px black;
+}
+
+.character-card:hover {
+    box-shadow: 5px 5px 5px grey;
+}
