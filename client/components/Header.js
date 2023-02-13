@@ -18,7 +18,7 @@ const Header = ({ theme }) => {
                     pl: "5vw",
                     display: "flex",
                     alignItems: "center",
-                    backgroundColor: "primary.main",
+                    backgroundColor: "secondary.main",
                     "& .MuiButton-root": {
                         ml: 1,
                         mr: 1
