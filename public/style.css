@@ -8,15 +8,6 @@ html {
     background-color: #d9dad7;
 }
 
-/* #root {
-    font-family: Arial, Helvetica, sans-serif;
-    width: 75vw;
-    margin: 0 auto;
-    background-color:  #1a2639;
-    border-left: 30px solid #c24d2c;
-    border-right: 30px solid #c24d2c;
-} */
-
 ul {
     list-style-position: inside;
 }
