@@ -1,10 +1,11 @@
+import Typography from "@mui/material/Typography";
 import React from "react";
 
 const Home = () => {
     return (
         <>
-            <h1>Curse of Strahd with the FoCo Squad</h1>
-            <h2>Welcome to the official website for our Curse of Strahd campaign!</h2>
+            <Typography textAlign="center" variant="h2">Curse of Strahd with the FoCo Squad</Typography>
+            <Typography textAlign="center" variant="h4">Welcome to the official website for our Curse of Strahd campaign!</Typography>
         </>
     );
 };
