@@ -52,7 +52,7 @@ const App = () => {
                     <Routes>
                         <Route path="/" element={<Home />} />
                         <Route path="/players" element={<PCDirectory />} />
-                        <Route path="/players/:name" element={<CharacterSheet />} />
+                        <Route path="/players/:name" element={<CharacterSheet theme={theme} />} />
                         <Route path="/session-notes" element={<SessionNotesDirectory />} />
                     </Routes>
                 </Box>
