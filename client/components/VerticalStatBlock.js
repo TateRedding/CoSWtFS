@@ -1,11 +1,17 @@
 import React from "react";
+import Typography from "@mui/material/Typography";
+import StatBlock from "./StatBlock";
 
 const VerticalStatBlock = ({ stat, name }) => {
     return (
-        <div className="stat-block vertical">
-            <p>{stat}</p>
-            <p>{name}</p>
-        </div>
+        <StatBlock
+            sx={{
+                flexDirection: "column",
+                alignItems: "center"
+            }}>
+            <Typography variant="h6">{stat}</Typography>
+            <Typography variant="caption" textTransform="capitalize">{name}</Typography>
+        </StatBlock>
     );
 };
 

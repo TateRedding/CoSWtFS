@@ -5,18 +5,34 @@ import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 
 
-const CharacterAboutSection = ({ char, name }) => {
+const OverviewTab = ({ char, name }) => {
     let charClassName = '';
     (char.subclass) ? charClassName = `${char.subclass} ${char.class}` : charClassName = char.class;
+
+    const GridItem = ({ stat, label }) => {
+        return (
+            <>
+                <Typography variant="h6" 
+                sx={{
+                    textTransform: "capitalize",
+                    width: "100%",
+                    borderBottom: 1,
+                    borderColor: "divider"
+                }}>{stat}</Typography>
+                <Typography variant="caption">{label}</Typography>
+            </>
+        );
+    };
 
     return (
         <Box
             sx={{
-                width: {sm: "333px", md: "999px"},
+                width: { sm: "400px", md: "1200px" },
                 ml: "auto",
                 mr: "auto",
+                p: 3,
                 display: "flex",
-                flexDirection: {sm: "column", md: "row"},
+                flexDirection: { sm: "column", md: "row" },
                 backgroundColor: "neutral.main"
             }}>
             <Box
@@ -36,56 +52,45 @@ const CharacterAboutSection = ({ char, name }) => {
                         mb: 1
                     }}
                     spacing={1}>
-                    <Typography variant="h3">{name}</Typography>
-                    <Typography variant="h5">{char.player}</Typography>
+                    <Typography variant="h3">{char.player}</Typography>
+                    <Typography variant="h5">Player</Typography>
                 </Stack>
                 <Grid
                     container
                     rowSpacing={{ sm: 1, md: 3 }}
                     textAlign="center">
                     <Grid item sm={12} md={4}>
-                        <Typography>{char.level}</Typography>
-                        <Typography variant="caption">Level</Typography>
+                        <GridItem stat={char.level} label="Level" />
                     </Grid>
                     <Grid item sm={12} md={4}>
-                        <Typography>{char.species}</Typography>
-                        <Typography variant="caption">Species</Typography>
+                        <GridItem stat={char.species} label="Species" />
                     </Grid>
                     <Grid item sm={12} md={4}>
-                        <Typography>{charClassName}</Typography>
-                        <Typography variant="caption">Class</Typography>
+                        <GridItem stat={charClassName} label="Class" />
                     </Grid>
                     <Grid item sm={12} md={6}>
-                        <Typography>{char.alignment}</Typography>
-                        <Typography variant="caption">Alignment</Typography>
+                        <GridItem stat={char.alignment} label="Alignment" />
                     </Grid>
                     <Grid item sm={12} md={6}>
-                        <Typography>{char.background}</Typography>
-                        <Typography variant="caption">Background</Typography>
+                        <GridItem stat={char.background} label="Background" />
                     </Grid>
                     <Grid item sm={12} md={4}>
-                        <Typography>{char.age}</Typography>
-                        <Typography variant="caption">Age</Typography>
+                        <GridItem stat={char.age} label="Age" />
                     </Grid>
                     <Grid item sm={12} md={4}>
-                        <Typography>{char.height}</Typography>
-                        <Typography variant="caption">Height</Typography>
+                        <GridItem stat={char.height} label="Height" />
                     </Grid>
                     <Grid item sm={12} md={4}>
-                        <Typography>{char.weight}</Typography>
-                        <Typography variant="caption">Weight</Typography>
+                        <GridItem stat={char.weight} label="Weight" />
                     </Grid>
                     <Grid item sm={12} md={4}>
-                        <Typography textTransform="capitalize">{char.eyes}</Typography>
-                        <Typography variant="caption">Eyes</Typography>
+                        <GridItem stat={char.eyes} label="Eyes" />
                     </Grid>
                     <Grid item sm={12} md={4}>
-                        <Typography textTransform="capitalize">{char.hair}</Typography>
-                        <Typography variant="caption">Hair</Typography>
+                        <GridItem stat={char.hair} label="Hair" />
                     </Grid>
                     <Grid item sm={12} md={4}>
-                        <Typography textTransform="capitalize">{char.skin}</Typography>
-                        <Typography variant="caption">Skin</Typography>
+                        <GridItem stat={char.skin} label="Skin" />
                     </Grid>
                 </Grid>
             </Box>
@@ -93,4 +98,4 @@ const CharacterAboutSection = ({ char, name }) => {
     );
 };
 
-export default CharacterAboutSection;
+export default OverviewTab;
